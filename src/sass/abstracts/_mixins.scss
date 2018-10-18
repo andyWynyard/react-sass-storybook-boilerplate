@@ -1,0 +1,88 @@
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin absRight($offset) {
+  position: absolute;
+  top: 50%;
+  right: $offset;
+  transform: translateY(-50%);
+}
+
+@mixin afterBorder($color, $height, $index: 1) {
+  position: relative;
+  &:after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: $height;
+    z-index: $index;
+    background-color: $color;
+    transition: 0.25s all ease-in-out;
+  }
+}
+
+// MEDIA QUERY MANAGER
+/*
+0 - 600:       Phone
+600 - 900:     Tablet Portrait
+900 - 1200:    Tablet Landscape
+1200 - 1800:   Normal Range
+1800 + :       Big Desktop
+
+@breakpoint argument choices
+
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + Typography > general layout > grid > page layout > components
+
+1em = 16px
+ */
+
+// DONT USE THIS AS YOUR DEFAULT, GET INTO CSS-GRIDS AND IF THERE
+// IS AN ISSUE USE THESE. THESE COULD MESS YOU UP
+// AND WITH GRIDS THEY ARE OFTEN REDUNDANT
+
+@mixin respond($breakpoint) {
+  @if $breakpoint==phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    } // 600px
+  }
+  @if $breakpoint==tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    } // 900px
+  }
+  @if $breakpoint==tab-land {
+    @media only screen and (max-width: 75em) {
+      @content;
+    } // 1200px
+  }
+  @if $breakpoint==big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    } // 1800px
+  }
+  @if $breakpoint==giant-desktop {
+    @media only screen and (min-width: 175em) {
+      @content;
+    } // 2800px
+  }
+}

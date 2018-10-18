@@ -1,0 +1,220 @@
+@font-face {
+  font-family: 'gotham-narrow-book';
+  src: url("./fonts/GothamNarrow-Book.eot");
+  /* IE9 Compat Modes */
+  src: url("./fonts/GothamNarrow-Book.woff2") format("woff2"), url("./fonts/GothamNarrow-Book.woff") format("woff"), url("./fonts/GothamNarrow-Book.ttf") format("truetype"), url("./fonts/GothamNarrow-Book.otf") format("opentype"); }
+
+@font-face {
+  font-family: 'gotham-narrow-medium';
+  src: url("./fonts/GothamNarrow-Medium.eot");
+  /* IE9 Compat Modes */
+  src: url("./fonts/GothamNarrow-Medium.woff2") format("woff2"), url("./fonts/GothamNarrow-Medium.woff") format("woff"), url("./fonts/GothamNarrow-Medium.ttf") format("truetype"), url("./fonts/GothamNarrow-Medium.otf") format("opentype"); }
+
+@font-face {
+  font-family: 'Glypha-Bold';
+  src: url("./fonts/Glypha-Bold.eot");
+  /* IE9 Compat Modes */
+  src: url("./fonts/Glypha-Bold.woff2") format("woff2"), url("./fonts/Glypha-Bold.woff") format("woff"), url("./fonts/Glypha-Bold.ttf") format("truetype"), url("./fonts/Glypha-Bold.otf") format("opentype"); }
+
+@font-face {
+  font-family: 'Glypha-Roman';
+  src: url("./fonts/Glypha-55-Roman.eot");
+  /* IE9 Compat Modes */
+  src: url("./fonts/Glypha-55-Roman.woff2") format("woff2"), url("./fonts/Glypha-55-Roman.woff") format("woff"), url("./fonts/Glypha-55-Roman.ttf") format("truetype"), url("./fonts/Glypha-55-Roman.otf") format("opentype"); }
+
+@font-face {
+  font-family: 'univers-45-light';
+  src: url("./fonts/Univers-Light.eot");
+  /* IE9 Compat Modes */
+  src: url("./fonts/Univers-Light.woff2") format("woff2"), url("./fonts/Univers-Light.woff") format("woff"), url("./fonts/Univers-Light.ttf") format("truetype"), url("./fonts/Univers-Light.otf") format("opentype"); }
+
+@font-face {
+  font-family: 'univers-55-roman';
+  src: url("./fonts/UniversLTStd.eot");
+  /* IE9 Compat Modes */
+  src: url("./fonts/UniversLTStd.woff2") format("woff2"), url("./fonts/UniversLTStd.woff") format("woff"), url("./fonts/UniversLTStd.ttf") format("truetype"), url("./fonts/UniversLTStd.otf") format("opentype"); }
+
+/*
+0 - 600:       Phone
+600 - 900:     Tablet Portrait
+900 - 1200:    Tablet Landscape
+1200 - 1800:   Normal Range
+1800 + :       Big Desktop
+
+@breakpoint argument choices
+
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + Typography > general layout > grid > page layout > components
+
+1em = 16px
+ */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 55%; } }
+
+body {
+  box-sizing: border-box;
+  padding: 0;
+  overflow-x: hidden; }
+
+:focus {
+  outline-color: #ffd600 !important; }
+
+::selection {
+  background-color: #ffd600;
+  color: #fff; }
+
+pre {
+  white-space: pre-wrap;
+  /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap;
+  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;
+  /* Opera 4-6 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  word-wrap: break-word;
+  /* Internet Explorer 5.5+ */ }
+
+/* zooms in and out over however many seconds
+animation: miniZoom 0.3s ease-in-out infinite alternate; */
+@keyframes miniZoom {
+  from {
+    transform: scale(1); }
+  to {
+    transform: scale(1.2); } }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInButton {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem); }
+  80% {
+    transform: translateY(-0.4rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+body {
+  font-family: 'gotham-narrow-book', sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-weight: 400;
+  line-height: 1.7rem;
+  color: #5e5e5d;
+  word-wrap: break-word; }
+
+.no-wrap {
+  white-space: nowrap; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+a:hover {
+  text-decoration: none;
+  color: inherit; }
+
+h1 {
+  font-family: 'gotham-narrow-medium', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-size: 4rem;
+  line-height: 4.5rem;
+  font-weight: 900;
+  margin-top: 4rem;
+  margin-bottom: 2rem; }
+  h1 h2 {
+    font-family: 'gotham-narrow-medium', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    font-size: 2.2rem;
+    line-height: 3.74rem; }
+  h1 h3 {
+    font-family: 'gotham-narrow-book', sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    font-size: 2.2rem;
+    line-height: 3.74rem; }
+  h1 h4 {
+    font-family: 'gotham-narrow-medium', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    font-size: 1.6rem;
+    line-height: 2.72rem; }
+  h1 h5 {
+    font-family: 'gotham-narrow-book', sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    font-size: 1.6rem;
+    line-height: 2.72rem; }
+  h1 p {
+    font-family: 'gotham-narrow-book', sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    font-size: 1.6rem;
+    line-height: 2.4rem; }
+    h1 p .small {
+      font-size: 1rem;
+      line-height: 1.7rem !important; }
+
+.u-center-text {
+  text-align: center !important; }
+
+.u-right-text {
+  text-align: right !important; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important; }
+
+.u-margin-top-huge {
+  margin-top: 10rem !important; }
+
+.u-margin-top-big {
+  margin-top: 8rem !important; }
+
+.u-margin-top-medium {
+  margin-top: 4rem !important; }
+
+.u-margin-top-small {
+  margin-top: 1.5rem !important; }
+
+input.menu-checkbox-hide[type='checkbox'] {
+  position: absolute;
+  left: -99999rem; }
+
+button.button-zero-out {
+  cursor: pointer;
+  font-family: inherit;
+  border: 0;
+  padding: 0;
+  background-color: transparent; }
+
+.button {
+  border: 1px solid #ffd600;
+  background-color: #fff;
+  padding: 2rem; }

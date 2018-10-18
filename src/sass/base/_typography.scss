@@ -1,0 +1,79 @@
+body {
+  font-family: 'gotham-narrow-book', sans-serif, -apple-system,
+    BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-weight: 400;
+  line-height: 1.7rem;
+  color: $color-secondary;
+  word-wrap: break-word;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  font-family: 'gotham-narrow-medium', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-size: 4rem;
+  line-height: 4.5rem;
+  font-weight: 900;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+
+  h2 {
+    font-family: 'gotham-narrow-medium', -apple-system, BlinkMacSystemFont,
+      'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif,
+      'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    font-size: 2.2rem;
+    line-height: 3.74rem;
+  }
+
+  h3 {
+    font-family: 'gotham-narrow-book', sans-serif, -apple-system,
+      BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+      sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    font-size: 2.2rem;
+    line-height: 3.74rem;
+  }
+
+  h4 {
+    font-family: 'gotham-narrow-medium', -apple-system, BlinkMacSystemFont,
+      'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif,
+      'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    font-size: 1.6rem;
+    line-height: 2.72rem;
+  }
+
+  h5 {
+    font-family: 'gotham-narrow-book', sans-serif, -apple-system,
+      BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+      sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    font-size: 1.6rem;
+    line-height: 2.72rem;
+  }
+
+  p {
+    font-family: 'gotham-narrow-book', sans-serif, -apple-system,
+      BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+      sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+
+    .small {
+      font-size: 1rem;
+      line-height: 1.7rem !important;
+    }
+  }
+}

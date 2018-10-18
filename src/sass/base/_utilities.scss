@@ -1,0 +1,48 @@
+.u-center-text {
+  text-align: center !important;
+}
+
+.u-right-text {
+  text-align: right !important;
+}
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important;
+}
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important;
+}
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important;
+}
+
+.u-margin-top-huge {
+  margin-top: 10rem !important;
+}
+
+.u-margin-top-big {
+  margin-top: 8rem !important;
+}
+
+.u-margin-top-medium {
+  margin-top: 4rem !important;
+}
+
+.u-margin-top-small {
+  margin-top: 1.5rem !important;
+}
+
+input.menu-checkbox-hide[type='checkbox'] {
+  position: absolute;
+  left: -99999rem;
+}
+
+button.button-zero-out {
+  cursor: pointer;
+  font-family: inherit;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+}
